@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: 'Kortix Suna',
-  url: 'https://suna.so/',
-  description: 'Kortix AI',
+  name: 'Symboolic Persona Agents',
+  url: 'https://demo-agents.symboolic.com/',
+  description: 'Symboolic Persona Agents',
   links: {
     twitter: 'https://x.com/kortixai',
     github: 'https://github.com/kortix-ai/',
