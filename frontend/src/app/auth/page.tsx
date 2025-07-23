@@ -30,7 +30,7 @@ import {
   DialogFooter,
 } from '@/components/ui/dialog';
 import GitHubSignIn from '@/components/GithubSignIn';
-import { KortixLogo } from '@/components/sidebar/kortix-logo';
+import { Logo } from '@/components/sidebar/logo';
 import { Ripple } from '@/components/ui/ripple';
 import { ReleaseBadge } from '@/components/auth/release-badge';
 
@@ -271,20 +271,11 @@ function LoginContent() {
       <div className="min-h-screen bg-background relative">
         <div className="absolute top-6 left-6 z-10">
           <Link href="/" className="flex items-center">
-            <KortixLogo size={28} />
+            <Logo size={28} />
           </Link>
         </div>
         <div className="flex min-h-screen">
           <div className="relative flex-1 flex items-center justify-center p-4 lg:p-8">
-            <div className="absolute top-6 right-10 z-10">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to home
-              </Link>
-            </div>
             <div className="w-full max-w-sm">
               <div className="mb-4 flex items-center flex-col gap-4 justify-center">
                 {customAgentsEnabled && <ReleaseBadge className='mb-4' text="Custom Agents, Workflows, and more!" link="/changelog" />}
@@ -292,20 +283,6 @@ function LoginContent() {
                   {isSignUp ? 'Create your account' : 'Log into your account'}
                 </h1>
               </div>
-            <div className="space-y-3 mb-4">
-              <GoogleSignIn returnUrl={returnUrl || undefined} />
-              <GitHubSignIn returnUrl={returnUrl || undefined} />
-            </div>
-            <div className="relative my-4">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-border"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-background text-muted-foreground">
-                  or email
-                </span>
-              </div>
-            </div>
             <form className="space-y-3">
               <Input
                 id="email"
@@ -377,11 +354,6 @@ function LoginContent() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="hidden lg:flex flex-1 items-center justify-center bg-sidebar relative overflow-hidden">
-          <div className="absolute inset-0">
-            <Ripple />
           </div>
         </div>
       </div>

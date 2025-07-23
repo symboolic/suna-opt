@@ -14,7 +14,7 @@ import {
     safeJsonParse,
 } from '@/components/thread/utils';
 import { formatMCPToolDisplayName } from '@/components/thread/tool-views/mcp-tool/_utils';
-import { KortixLogo } from '@/components/sidebar/kortix-logo';
+import { Logo } from '@/components/sidebar/logo';
 import { AgentLoader } from './loader';
 import { parseXmlToolCalls, isNewXmlFormat, extractToolNameFromStream } from '@/components/thread/tool-views/xml-parser';
 import { parseToolResult } from '@/components/thread/tool-views/tool-result-parser';
@@ -315,7 +315,7 @@ export const ThreadContent: React.FC<ThreadContentProps> = ({
     debugMode = false,
     isPreviewMode = false,
     agentName = 'Suna',
-    agentAvatar = <KortixLogo size={16} />,
+    agentAvatar = <Logo size={16} />,
     emptyStateComponent,
 }) => {
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -622,18 +622,13 @@ export const ThreadContent: React.FC<ThreadContentProps> = ({
                                                                         </div>
                                                                     );
                                                                 }
-                                                                return <KortixLogo size={16} />;
+                                                                return <Logo size={16} />;
                                                             })()}
                                                         </div>
                                                         <p className='ml-2 text-sm text-muted-foreground'>
                                                             {(() => {
-                                                                const firstAssistantWithAgent = group.messages.find(msg =>
-                                                                    msg.type === 'assistant' && msg.agents?.name
-                                                                );
-                                                                if (firstAssistantWithAgent?.agents?.name) {
-                                                                    return firstAssistantWithAgent.agents.name;
-                                                                }
-                                                                return 'Suna';
+                                                                
+                                                                return 'Persona';
                                                             })()}
                                                         </p>
                                                     </div>
