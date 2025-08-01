@@ -435,7 +435,7 @@ export function ToolCallSidePanel({
                   <div className="flex items-center justify-between">
                     <div className="ml-2 flex items-center gap-2">
                       <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
-                        {agentName ? `${agentName}'s Computer` : 'Suna\'s Computer'}
+                        Persona's computer
                       </h2>
                     </div>
                     <Button
@@ -519,7 +519,7 @@ export function ToolCallSidePanel({
               <div className="flex items-center justify-between">
                 <div className="ml-2 flex items-center gap-2">
                   <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
-                    {agentName ? `${agentName}'s Computer` : 'Suna\'s Computer'}
+                    Persona's computer
                   </h2>
                 </div>
                 <div className="flex items-center gap-2">
@@ -565,7 +565,7 @@ export function ToolCallSidePanel({
             <div className="flex items-center justify-between">
               <div className="ml-2 flex items-center gap-2">
                 <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
-                  {agentName ? `${agentName}'s Computer` : 'Suna\'s Computer'}
+                  Persona's computer
                 </h2>
               </div>
               <Button
@@ -615,7 +615,7 @@ export function ToolCallSidePanel({
           <div className="flex items-center justify-between">
             <motion.div layoutId="tool-icon" className="ml-2 flex items-center gap-2">
               <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
-                {agentName ? `${agentName}'s Computer` : 'Suna\'s Computer'}
+                Persona's computer
               </h2>
             </motion.div>
 
